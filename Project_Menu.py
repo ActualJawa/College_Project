@@ -101,9 +101,6 @@ while running == True:
             
         pygame.display.flip()
         
-        if middle_click == True:
-            screen.fill((0, 0, 0))
-            pygame.display.flip()
         
     """After switching the game state to settings in order to create the settings menu this will be run.
     I will need a varied background and colour options in order to prevent the menu from being too repetitive.
@@ -212,8 +209,8 @@ while running == True:
                 
         #Music slider - should set as a percentage, will assign to music_vol later
         music_slider = Slider(50, 200, 500, 50, settings_font, 1, 1)
-        music_slider.draw(screen)
         music_slider.update()
+        music_slider.draw(screen)
         pygame.display.flip()
         music_vol_text = settings_font.render('Music Volume', True, (255, 255, 255))
         screen.blit(music_vol_text, (50, 150))
